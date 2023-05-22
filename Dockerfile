@@ -18,14 +18,14 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #install node from nodesource following instructions: https://github.com/nodesource/distributions#debinstall
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
   && apt-get install -y nodejs \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #download mineos from github
 RUN mkdir /usr/games/minecraft \
   && cd /usr/games/minecraft \
-  && git clone --depth=1 https://github.com/hexparrot/mineos-node.git . \
+  && git clone --depth=1 https://github.com/valeyran/mineos-node.git . \
   && cp mineos.conf /etc/mineos.conf \
   && chmod +x webui.js mineos_console.js service.js
 
