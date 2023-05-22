@@ -20,7 +20,7 @@ exports.profile = {
       item['downloaded'] = fs.existsSync(path.join(profile_dir, item.id, item.filename));
       item['version'] = 0;
       item['release_version'] = '1.19.83.01';
-      item['url'] = 'https://minecraft.azureedge.net/bin-linux/bedrock-server-1.18.83.01.zip';
+      item['url'] = 'https://minecraft.azureedge.net/bin-linux/bedrock-server-1.19.83.01.zip';
       p.push(JSON.parse(JSON.stringify(item)));
 
       item['id'] = 'bedrock-server-1.18.33.02';
